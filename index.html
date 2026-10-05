@@ -3,43 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SURYA — Religions & Future Predictions</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>SURYA — Religions • Future Predictions • Documents</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-<a class="brand" href="#home"><span>◈</span><b>surya</b></a>
-<nav>
-<a class="active" href="#home">Home</a>
-<a href="#religions">Religions</a>
-<a href="#predictions">Future Predictions</a>
-<a href="#documents">All Documents</a>
-</nav><button id="theme">☾</button>
-</header>
+<div class="site">
+  <!-- The reference artwork is used directly so the visual stays EXACTLY the same. -->
+  <img src="surya-homepage.png" class="reference" alt="SURYA">
 
-<main id="home">
-<section class="hero"><div class="hero-content">
-<div class="sun"></div><h1>surya</h1>
-<p class="tag">Religions <i>•</i> Future Predictions <i>•</i> Documents</p>
-<p>Explore knowledge from different religions, future possibilities<br>and important documents — all in one place.</p>
-<div class="search"><span>⌕</span><input id="q" placeholder="Search documents..."><button id="search">Search</button></div>
-</div></section>
+  <a class="nav-hit home" href="#home" aria-label="Home"></a>
+  <a class="nav-hit religions" href="#religions" aria-label="Religions"></a>
+  <a class="nav-hit predictions" href="#predictions" aria-label="Future Predictions"></a>
+  <a class="nav-hit documents" href="#documents" aria-label="All Documents"></a>
 
-<section class="cards">
-<a class="card religion" href="#documents" data-cat="religions"><strong>▤</strong><div><h2>Religions</h2><p>Explore holy books, teachings and knowledge from different religions.</p></div><em>→</em></a>
-<a class="card prediction" href="#documents" data-cat="predictions"><strong>◉</strong><div><h2>Future Predictions</h2><p>Read about future possibilities, prophecies and interesting predictions.</p></div><em>→</em></a>
-<a class="card docs" href="#documents" data-cat="all"><strong>▱</strong><div><h2>All Documents</h2><p>Browse all available documents in one place.</p></div><em>→</em></a>
-</section>
+  <div class="search-overlay">
+    <span>⌕</span>
+    <input id="searchInput" type="search" placeholder="Search documents..." aria-label="Search documents">
+    <button id="searchButton">Search</button>
+  </div>
 
-<section class="documents" id="documents">
-<div class="heading"><h2>★ Featured Documents</h2><button id="all">View All →</button></div>
-<div id="list" class="list"><div class="empty"><span>▱</span><h3>No documents yet</h3><p>PDF files will appear here once they are uploaded.</p></div></div>
-</section>
-</main>
+  <a class="card-hit religion-card" href="#religions" aria-label="Religions"></a>
+  <a class="card-hit prediction-card" href="#predictions" aria-label="Future Predictions"></a>
+  <a class="card-hit all-card" href="#documents" aria-label="All Documents"></a>
 
-<footer><span>© 2026 SURYA. All rights reserved.</span><span>Knowledge | Religions | Future Predictions | Documents</span></footer>
+  <a class="view-all" href="#documents">View All →</a>
+</div>
+
+<section id="home" class="anchor-section"></section>
+<section id="religions" class="anchor-section"><h2>Religions</h2><p>Religion PDFs will be added here.</p></section>
+<section id="predictions" class="anchor-section"><h2>Future Predictions</h2><p>Future-prediction PDFs will be added here.</p></section>
+<section id="documents" class="anchor-section"><h2>All Documents</h2><p>Your PDFs will be added here later.</p></section>
+
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>

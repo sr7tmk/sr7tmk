@@ -1,3 +1,12 @@
-const documents=[];const list=document.getElementById('list');const q=document.getElementById('q');
-function render(items=documents){if(!items.length){list.innerHTML='<div class="empty"><span>▱</span><h3>No documents yet</h3><p>PDF files will appear here once they are uploaded.</p></div>';return}list.innerHTML=items.map(d=>`<article class="doc"><h3>${d.title}</h3><p>${d.description||''}</p><a href="${d.file}" target="_blank">Read</a> <a href="${d.file}" download>Download</a></article>`).join('')}
-function search(){let x=q.value.toLowerCase().trim();render(documents.filter(d=>(d.title+' '+(d.description||'')+' '+(d.category||'')).toLowerCase().includes(x)))}document.getElementById('search').onclick=search;q.onkeydown=e=>{if(e.key==='Enter')search()};document.querySelectorAll('.card').forEach(c=>c.onclick=()=>{let cat=c.dataset.cat;render(cat==='all'?documents:documents.filter(d=>d.category===cat))});document.getElementById('all').onclick=()=>render();document.getElementById('theme').onclick=()=>document.body.classList.toggle('light');render();
+const input = document.getElementById("searchInput");
+const button = document.getElementById("searchButton");
+
+button.addEventListener("click", () => {
+  const q = input.value.trim();
+  if (q) {
+    document.getElementById("documents").scrollIntoView({behavior:"smooth"});
+  }
+});
+input.addEventListener("keydown", e => {
+  if (e.key === "Enter") button.click();
+});

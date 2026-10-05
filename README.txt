@@ -1,7 +1,13 @@
-SURYA WEBSITE
-Updated homepage design.
+SURYA — EXACT VISUAL VERSION
 
-PDFs can be added later:
-1. Create a folder named pdfs.
-2. Put your PDF files inside it.
-3. Add document entries to the documents array in script.js.
+This version uses the supplied reference artwork directly as the homepage visual.
+Nothing in the artwork has been redesigned or approximated.
+
+The transparent overlays make the navigation, cards, and search area clickable.
+PDF functionality can be added later without changing the visual artwork.
+
+Files:
+- index.html
+- style.css
+- script.js
+- surya-homepage.png
